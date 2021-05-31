@@ -5,8 +5,8 @@ import {HttpClient} from "@angular/common/http";
   providedIn: 'root'
 })
 export class DataService {
-
-  private url = 'https://g3blogtai.herokuapp.com';
+  private url = 'http://localhost:3002'
+  //private url = 'https://g3blogtai.herokuapp.com';
 
   constructor(private http: HttpClient) {
   }
@@ -25,6 +25,10 @@ export class DataService {
 
   createOrUpdate(post: any) {
     return this.http.post(`${this.url}/api/posts`, post);
+  }
+
+  deleteById(id: string | null){
+    return this.http.delete(`${this.url}/api/post/`+id);
   }
 
 }

@@ -1,7 +1,7 @@
 <div class="card" style="width: 18rem;">
-  <blog-item-image [image]="image"></blog-item-image>
+  <blog-item-image ></blog-item-image>
   <div class="card-body">
-    <h5 class="card-title">{{ title }}</h5>
+    <h5 class="card-title">{{ title | titlecase }}</h5>
     <p class="card-text">
       <blog-item-text [text]="text"></blog-item-text>
     </p>

@@ -9,8 +9,8 @@ import {Token} from "../models/token";
   providedIn: 'root'
 })
 export class AuthService {
-
-  private url = 'https://g3blogtai.herokuapp.com/api';
+  private url = 'http://localhost:3002/api'
+ // private url = 'https://g3blogtai.herokuapp.com/api';
 
   constructor(private http: HttpClient) {
   }
