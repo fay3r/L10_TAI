@@ -4,14 +4,18 @@
       <h1 class="fw-light">Blog</h1>
       <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
       <p>
-        <a href="#" class="btn btn-primary my-2">Go to blog</a>
-        <a href="#" class="btn btn-secondary my-2">Contact</a>
+        <a [routerLink]="'/blog'" class="btn btn-primary my-2">Go to blog</a>
+        <a [routerLink]="'/contact'" href="#" class="btn btn-secondary my-2">Contact</a>
       </p>
       <p>
-        <button class="btn btn-primary my-2" [routerLink]="'/login'">Login</button>
+        <button class="btn btn-primary my-2"
+                [routerLink]="'/login'"
+                *ngIf="!authService.isLoggedIn()">Login</button>
       </p>
       <p>
-        <button class="btn btn-primary my-2" [routerLink]="'/signup'">Sign Up</button>
+        <button class="btn btn-primary my-2"
+                [routerLink]="'/signup'"
+                *ngIf="!authService.isLoggedIn()">Sign Up</button>
       </p>
     </div>
   </div>
